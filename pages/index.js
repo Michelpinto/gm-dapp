@@ -23,6 +23,8 @@ export default function Home() {
             </Head>
 
             <Nav />
+            <Card />
+            <Body />
         </div>
     );
 }

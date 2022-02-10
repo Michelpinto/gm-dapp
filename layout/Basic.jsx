@@ -15,7 +15,7 @@ html {
 
 body {
     font-family: system-ui;
-    padding: 6rem;
+    padding: 3rem 6rem;
     background-color: #8A92B2;
  
 }
