@@ -18,7 +18,7 @@ export const P = styled.p`
     font-size: 1.7rem;
     color: #62688f;
     font-weight: 500;
-    margin-left: 4rem;
+    /* margin-left: 4rem; */
 `;
 
 export const InsideDiv = styled.div`

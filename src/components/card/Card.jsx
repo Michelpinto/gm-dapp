@@ -1,8 +1,9 @@
 import React from "react";
 import { CardDiv, InsideDiv, P } from "./styles";
 import Image from "next/image";
+import { useState } from "react";
 
-const Card = () => {
+const Card = ({ balanceAcc, connectWallet, showAddress }) => {
     return (
         <CardDiv>
             <InsideDiv>
@@ -12,10 +13,10 @@ const Card = () => {
                     height={49}
                     alt="eth"
                 />
-                <p>Eth balance</p>
+                <p>{connectWallet && `${balanceAcc} ETH`}</p>
             </InsideDiv>
 
-            <P>Address</P>
+            <P>{showAddress}</P>
         </CardDiv>
     );
 };
