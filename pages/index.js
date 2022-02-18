@@ -4,12 +4,10 @@ import Body from "../src/components/body/Body";
 import Card from "../src/components/card/Card";
 import { Provider } from "react-redux";
 import store from "../model/store";
-import GmAbi from "../artifacts/contracts/Gm.sol/Gm.json";
 import { useState } from "react";
 import { ethers } from "ethers";
 
 export default function Home() {
-    const gmContract = "0xf87774de0848070A2298c5c6020f4A5863c95f57";
     const [connected, setConnected] = useState(false);
     const [balanceAcc, setBalanceAcc] = useState(0);
     const [showAddress, setShowAddress] = useState("Address");
@@ -61,7 +59,7 @@ export default function Home() {
                     connectWallet={connectWallet}
                     balanceAcc={balanceAcc}
                 />
-                <Body />
+                <Body connected={connected} connectWallet={connectWallet} />
             </div>
         </Provider>
     );

@@ -38,3 +38,9 @@ export const Button = styled.button`
     font-weight: 500;
     cursor: pointer;
 `;
+
+export const UiMsg = styled.h2`
+    color: #fff;
+    text-align: center;
+    margin-top: 1.5rem;
+`;
