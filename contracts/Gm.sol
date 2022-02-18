@@ -12,7 +12,7 @@ contract Gm {
     }
 
     function sendEth(address payable _to, string memory _message) payable external {
-        _to.transfer(address(this).balance);
+        _to.transfer(msg.value);
         message = _message;
     }
 }
