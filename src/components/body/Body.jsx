@@ -41,6 +41,9 @@ const Body = ({ connected, connectWallet }) => {
             await transaction.wait();
 
             setUiMessage("Transaction complete! 🥳");
+            setAddress("");
+            setAmount("");
+            setMessage("");
         }
     }
 
