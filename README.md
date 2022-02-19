@@ -1,15 +1,6 @@
-# Basic Sample Hardhat Project
+# Basic Dapp Project
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, a sample script that deploys that contract, and an example of a task implementation, which simply lists the available accounts.
+This project demonstrates how to send ether from your account to another one by simply adding the address, a simple message and the amount in ether.
 
-Try running some of the following tasks:
+I've used solidity for the smart contract, and ethers.js to interact with the contract. UI was done using react.
 
-```shell
-npx hardhat accounts
-npx hardhat compile
-npx hardhat clean
-npx hardhat test
-npx hardhat node
-node scripts/sample-script.js
-npx hardhat help
-```
