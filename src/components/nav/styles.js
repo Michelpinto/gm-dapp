@@ -18,5 +18,9 @@ export const Div = styled.div`
         background-color: #454a75;
         color: #fff;
         cursor: pointer;
+
+        @media screen and (max-width: 435px) {
+            width: 16.5rem;
+        }
     }
 `;

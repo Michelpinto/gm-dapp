@@ -12,6 +12,10 @@ export const CardDiv = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
+    @media screen and (max-width: 435px) {
+        width: 100%;
+    }
 `;
 
 export const P = styled.p`
