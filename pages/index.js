@@ -9,6 +9,7 @@ import { ethers } from "ethers";
 
 export default function Home() {
     const [connected, setConnected] = useState(false);
+    const [userAcc, setUserAcc] = useState();
     const [balanceAcc, setBalanceAcc] = useState(0);
     const [showAddress, setShowAddress] = useState("Address");
 
@@ -35,8 +36,17 @@ export default function Home() {
     }
 
     async function connectWallet() {
-        await window.ethereum.request({ method: "eth_requestAccounts" });
+        const accounts = await window.ethereum.request({
+            method: "eth_requestAccounts",
+        });
+
+        if (accounts.length !== 0) {
+            const account = accounts[0];
+            setUserAcc(account);
+        }
+
         console.log("connected");
+
         setConnected(true);
         getBalance();
     }
@@ -53,7 +63,11 @@ export default function Home() {
                     <link rel="icon" href="/favicon.ico" />
                 </Head>
 
-                <Nav connected={connected} connectWallet={connectWallet} />
+                <Nav
+                    connected={connected}
+                    userAcc={userAcc}
+                    connectWallet={connectWallet}
+                />
                 <Card
                     showAddress={showAddress}
                     connectWallet={connectWallet}

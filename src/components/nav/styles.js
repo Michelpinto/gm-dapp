@@ -10,7 +10,8 @@ export const Div = styled.div`
     }
 
     & button {
-        width: 19.5rem;
+        /* width: 19.5rem; */
+        padding: 0 2rem;
         height: 5rem;
         font-size: 1.7rem;
         border-radius: 1rem;
@@ -20,7 +21,7 @@ export const Div = styled.div`
         cursor: pointer;
 
         @media screen and (max-width: 435px) {
-            width: 16.5rem;
+            padding: 0 1rem;
         }
     }
 `;
